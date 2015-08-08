@@ -66,8 +66,9 @@ var AudioDetectSupport = (function() { 'use strict';
 		body.appendChild(audio);
 		///
 		function hasSupport(truthy) {
-			body.removeChild(audio);
+			if (!supports[format]) supports[format] = truthy;
 			supports[format + ':' + codec] = truthy;
+			body.removeChild(audio);
 			pending --;
 		};
 	};
