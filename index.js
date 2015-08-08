@@ -5,9 +5,7 @@
 	https://github.com/mudcube/AudioDetectSupport
 	----------------------------------------------------------
 	Probably, Maybe, No... Absolutely!
-	Detect what format Audio your browser supports.
-	----------------------------------------------------------
-	Currently detects: MP3 | Ogg Opus | Ogg Vorbis
+	Determine audio formats and features your browser supports.
 	----------------------------------------------------------
 	TEST FILES
 	----------------------------------------------------------
@@ -110,14 +108,9 @@ var AudioDetectSupport = (function() { 'use strict';
 		var audio = new Audio;
 
 		/// see what we can learn from the browser
-		var opus = audio.canPlayType('audio/ogg; codecs="opus"');
-		opus = (opus === 'probably' || opus === 'maybe'); //- 'no' is better test?
-
-		var vorbis = audio.canPlayType('audio/ogg; codecs="vorbis"');
-		vorbis = (vorbis === 'probably' || vorbis === 'maybe');
-
-		var mp3 = audio.canPlayType('audio/mpeg');
-		mp3 = (mp3 === 'probably' || mp3 === 'maybe');
+		var opus = !!audio.canPlayType('audio/ogg; codecs="opus"').replace(/no/i, '');
+		var vorbis = !!audio.canPlayType('audio/ogg; codecs="vorbis"').replace(/no/i, '');
+		var mp3 = !!audio.canPlayType('audio/mpeg').replace(/no/i, '');
 
 		/// at this point we possibly maybe have support
 		if (opus || vorbis || mp3) {
