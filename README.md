@@ -1,9 +1,9 @@
-# AudioDetectSupport
+# AudioSupports
 
 Quick and easy Audio format, and Audio feature detection.
 
 ```js
-AudioDetectSupport(function(audioSupport) {
+AudioSupports(function(audioSupport) {
 
 	console.log(audioSupport);
 
@@ -21,5 +21,5 @@ AudioDetectSupport(function(audioSupport) {
 });
 
 /// register custom formats with this method (or create a pull-request)
-AudioDetectSupport.register(format, codec, base64);
+AudioSupports.register(format, codec, base64);
 ```
