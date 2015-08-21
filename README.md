@@ -3,9 +3,9 @@
 Quick and easy Audio format, and Audio feature detection.
 
 ```js
-AudioSupports(function(audioSupport) {
+AudioSupports(function(supports) {
 
-	console.log(audioSupport);
+	console.log(supports);
 
 	// output:
 	// 	 {
