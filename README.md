@@ -13,10 +13,10 @@ AudioSupports(function(supports) {
 	// 		 'audioapi': true,
 	// 		 'midiapi': true,
 	// 		 'ogg': true,
-	// 		 'ogg:vorbis': true,
-	// 		 'ogg:opus': true,
+	// 		 'ogg_vorbis': true,
+	// 		 'ogg_opus': true,
 	// 		 'mpeg': true,
-	// 		 'mpeg:mp3': true
+	// 		 'mpeg_mp3': true
 	// 	 }
 });
 
