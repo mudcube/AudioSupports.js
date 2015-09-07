@@ -1,6 +1,6 @@
 /*
 	----------------------------------------------------------
-	AudioSupports : 2015-08-30 : https://mudcu.be
+	AudioSupports : 2015-09-05 : https://mudcu.be
 	----------------------------------------------------------
 	https://github.com/mudcube/AudioSupports
 	----------------------------------------------------------
@@ -125,7 +125,7 @@
 			}, 1);
 		}
 	};
-	
+
 	function canPlayThrough(test) {
 		var format = test.format;
 		var codec = test.codec;
@@ -145,7 +145,7 @@
 			hasSupport(true);
 		}, false);
 		audio.src = 'data:audio/' + format + ';base64,' + base64;
-		audio.play(); // needed for phonegap/cordova
+		audio.load();
 		///
 		function hasSupport(truthy) {
 			if (!supports[format]) supports[format] = truthy;
