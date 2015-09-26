@@ -1,6 +1,6 @@
 /*
 	----------------------------------------------------------
-	AudioSupports : 2015-09-05 : https://mudcu.be
+	AudioSupports : 2015-09-25 : https://mudcu.be
 	----------------------------------------------------------
 	https://github.com/mudcube/AudioSupports
 	----------------------------------------------------------
@@ -20,8 +20,8 @@
 			// audioSupport example:
 			// 	 {
 			// 		 'audio': true,
-			// 		 'audioapi': true,
-			// 		 'midiapi': true,
+			// 		 'audio_api': true,
+			// 		 'midi_api': true,
 			// 		 'ogg': true,
 			// 		 'ogg_vorbis': true,
 			// 		 'ogg_opus': true,
@@ -74,9 +74,9 @@
 	/* detect audio api */
 	function detectWebAudio() {
 		if (self.AudioContext || self.mozAudioContext || self.webkitAudioContext) {
-			return supports.audioapi = true;
+			return supports.audio_api = true;
 		} else {
-			return supports.audioapi = false;
+			return supports.audio_api = false;
 		}
 	};
 
@@ -86,18 +86,18 @@
 			var toString = Function.prototype.toString;
 			var isNative = toString.call(navigator.requestMIDIAccess).indexOf('[native code]') !== -1;
 			if (isNative) { // has native midi support
-				return supports.midiapi = true;
+				return supports.midi_api = true;
 			} else { // check for jazz plugin support
 				for (var n = 0; navigator.plugins.length > n; n ++) {
 					var plugin = navigator.plugins[n];
 					if (plugin.name.indexOf('Jazz-Plugin') >= 0) {
-						return supports.midiapi = true;
+						return supports.midi_api = true;
 					}
 				}
 			}
 		}
 		///
-		return supports.midiapi = false;
+		return supports.midi_api = false;
 	};
 	
 	/* detect formats */
