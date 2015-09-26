@@ -1,6 +1,6 @@
 {
   "name": "AudioDetectSupport",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Probably, Maybe, No... Absolutely! Detect what format Audio your browser supports. Currently detects: MP3 | Ogg Opus | Ogg Vorbis",
   "main": "index.js",
   "author": "Michael Deal <hello@sketch.io> (https://mudcu.be)",
