@@ -23,7 +23,7 @@ AudioSupports(function (supports) {
 	 }
 ```
 
-#### Register custom formats (or create a pull-request)
+#### Register custom formats:
 
 ```js
 AudioSupports.register(format, codec, base64);
