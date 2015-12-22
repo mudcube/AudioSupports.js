@@ -14,14 +14,20 @@ AudioSupports(function (supports) {
 
 ```js
 	 {
-		 'audio': true,
-		 'audioapi': true,
+		 'audio': { // these are supported on new Audio()
+			 'vorbis': true,
+			 'opus': true,
+			 'mp3': true
+		 },
+		 'audioapi': { // these are supported on new AudioContext()
+			 'vorbis': true,
+			 'opus': true,
+			 'mp3': true
+		 },
 		 'midiapi': true,
-		 'ogg': true,
-		 'ogg_vorbis': true,
-		 'ogg_opus': true,
-		 'mpeg': true,
-		 'mpeg_mp3': true
+		 'vorbis': true, // these are supported either on Audio() or AudioContext()
+		 'opus': true,
+		 'mp3': true
 	 }
 ```
 
