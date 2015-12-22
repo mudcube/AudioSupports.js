@@ -2,6 +2,8 @@
 
 #### Probably, Maybe, No... Absolutely!
 
+*This handy little method detects Audio formats and features your browser supports.*
+
 ```js
 AudioSupports(function (supports) {
 
