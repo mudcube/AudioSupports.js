@@ -20,8 +20,8 @@ AudioSupports(function (supports) {
 			 'mp3': true
 		 },
 		 'audioapi': { // these are supported on new AudioContext()
-			 'vorbis': true,
-			 'opus': true,
+			 'vorbis': false,
+			 'opus': false,
 			 'mp3': true
 		 },
 		 'midiapi': true,
