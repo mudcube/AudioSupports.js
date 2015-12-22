@@ -1,25 +1,30 @@
-# AudioSupports
+# AudioSupports(...)
 
-Quick and easy Audio format, and Audio feature detection.
+#### Probably, Maybe, No... Absolutely!
 
 ```js
-AudioSupports(function(supports) {
+AudioSupports(function (supports) {
 
-	console.log(supports);
-
-	// output:
-	// 	 {
-	// 		 'audio': true,
-	// 		 'audioapi': true,
-	// 		 'midiapi': true,
-	// 		 'ogg': true,
-	// 		 'ogg_vorbis': true,
-	// 		 'ogg_opus': true,
-	// 		 'mpeg': true,
-	// 		 'mpeg_mp3': true
-	// 	 }
 });
+```
 
-/// register custom formats with this method (or create a pull-request)
+#### An example output would be:
+
+```js
+	 {
+		 'audio': true,
+		 'audioapi': true,
+		 'midiapi': true,
+		 'ogg': true,
+		 'ogg_vorbis': true,
+		 'ogg_opus': true,
+		 'mpeg': true,
+		 'mpeg_mp3': true
+	 }
+```
+
+#### Register custom formats (or create a pull-request)
+
+```js
 AudioSupports.register(format, codec, base64);
 ```
